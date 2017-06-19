@@ -5,8 +5,8 @@ var gulp = require('gulp'),
  
 gulp.task('default', function() {
     return gulp.src('./style.css')
-        .pipe(minifyCSS('minify.css'))
         .pipe(gulp.dest('./out'))
+        .pipe(minifyCSS('minify.css'))   
         .pipe(notify('Attention! Write changes'));
 });
 
