@@ -1,22 +1,16 @@
-var gulp = require('gulp'),
-    minifyCSS = require('gulp-css-condense'),
-    notify = require("gulp-notify"),
-    autoprefixer = require('gulp-autoprefixer'),
-    cssNdb = require( 'gulp-css-nbd'),
-    concat = require( 'gulp-concat' );
-  
- 
-gulp.task('default', function() {
-    return gulp.src('./style.css')
-        .pipe(gulp.dest('./out'))
-        .pipe(minifyCSS('minify.css'))   
-        .pipe(notify('Attention! Write changes'))
-        .pipe(autoprefixer('last 15 version'))
-        .pipe( cssNdb() )
-        .pipe( concat( './out/common.css' ) )
-      
+var gulp = require('gulp');
+var	concat = require('gulp-concat');
+var cssmin = require('gulp-cssmin');
+
+gulp.task('cssConcat', function() {
+  gulp.src('./**/*.css')
+  	.pipe(concat('all.css'))
+  	.pipe(gulp.dest('./out/'));
 });
 
-gulp.task('watch', function() {
-    gulp.watch('/*.css', ['default']) 
+gulp.task('cssMin', function() {
+  gulp.src('./**/*.css')
+  	.pipe(cssmin())
+  	.pipe(concat('all.min.css'))
+  	.pipe(gulp.dest('./out/'));
 });

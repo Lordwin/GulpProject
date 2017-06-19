@@ -1,15 +1,16 @@
 {
-  "name": "gulp-project",
-  "version": "0.1.0",
+  "name": "package",
+  "version": "1.0.0",
+  "description": "AndreyLada project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrey Lada",
+  "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-css-condense": "^1.1.2",
-    "gulp-css-nbd": "^1.1.0",
-    "gulp-notify": "^3.0.0"
-  },
-  "dependencies": {
-    "gulp-css-nbd": "^1.1.0"
+    "gulp-cssmin": "^0.2.0"
   }
 }
