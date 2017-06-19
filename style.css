@@ -17,7 +17,7 @@ body {
   flex: auto;
   font-family: Verdana, Arial, Helvetica, sans-serif;
 }
-/*Header start*/
+/*Header started*/
 .header {
   width: 100%;
   max-width: 960px;
@@ -42,7 +42,7 @@ body {
   flex: none;
   align-items: center;
 }
-/*.site-name no animation{
+/*.site-name witout animation {
     text-align: center;
     font-weight: 100;
 }
