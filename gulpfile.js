@@ -4,6 +4,7 @@ var cssmin = require('gulp-cssmin');
 var uglify = require('gulp-uglify');
 var less = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
+var imagemin = require('gulp-imagemin');
 //var watch = require('gulp-watch');
 
 gulp.task('default', ['cssConcat', 'cssMin', 'jsUglify', 'watch'])
@@ -40,4 +41,10 @@ gulp.task('cssMin', function() {
   	.pipe(cssmin())
   	.pipe(concat('all.min.css'))
   	.pipe(gulp.dest('./out/'));
+});
+
+gulp.task('imageMin', function() {
+	gulp.src('./images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('out/images'))
 });
