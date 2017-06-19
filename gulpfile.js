@@ -5,7 +5,7 @@ var uglify = require('gulp-uglify');
 var less = require('gulp-less');
 //var watch = require('gulp-watch');
 
-gulp.task('default', ['cssConcat', 'cssMin', 'jsUglify'])
+gulp.task('default', ['cssConcat', 'cssMin', 'jsUglify', 'watch'])
 
 gulp.task('watch', function() {
 	gulp.watch('.GulpProject/**/*.css', ['cssConcat']);
