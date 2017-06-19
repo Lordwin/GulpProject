@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ITWeb Knowledge Library</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../images/logo_vector-16x16.ico" type="image/x-icon">
+    <script src="../scripts/script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img class="logo" src="../images/logo_vector-250x150.png" alt="Image_Logo" />
+         <div>
+            <h1 class="site-name"><span class="site-name-span">IT Knowledge Library</span>
+            </h1>
+        </div>
+        <div class="cart-block">
+            <a href="../cart/cart.html" class="cart-block-link" title="Open cart">
+                <div class="cart-logo">
+                    <!-- <img src="images/cart-logo.png" alt="cart-image">-->
+                </div>
+            </a>
+            <div class="cart-count">
+                <form novalidate>
+                    <input type="text" name="count-cart" class="count-cart" id="count-cart" readonly>
+                </form>
+            </div>
+        </div>
+        <nav class="top-nav-menu">
+            <ul class="top-nav-menu-list">
+                <li class="top-nav-menu-list-item"><a href="../index.html" class="top-nav-menu-list-item-link">Home</a></li>
+                <li class="top-nav-menu-list-item"><a href="../games/games.html" class="top-nav-menu-list-item-link">OnlineGames</a>
+                    <div class="dropdown-menu-content">
+                      <a href="#" class="top-nav-menu-list-item-link">Black Jack</a>
+                      <a href="#" class="top-nav-menu-list-item-link">Guess number</a>
+                    </div>
+                </li>
+                <li class="top-nav-menu-list-item"><a href="../tests/test.html" class="top-nav-menu-list-item-link">OnlineTests</a>
+                    <div class="dropdown-menu-content">
+                      <a href="#" class="top-nav-menu-list-item-link">JS test</a>
+                      <a href="#" class="top-nav-menu-list-item-link">HTML test</a>
+                      <a href="#" class="top-nav-menu-list-item-link">PHP test</a>
+                    </div>
+                </li>
+                <li class="top-nav-menu-list-item"><a href="../blog/blog.html" class="top-nav-menu-list-item-link">Blog</a></li>
+                <li class="top-nav-menu-list-item"><a href="../forum/forum.html" class="top-nav-menu-list-item-link">Forum</a></li>
+                <li class="top-nav-menu-list-item" id="MyAccount" onclick="showRegForm();"><a href="../user/checkin.html" class="top-nav-menu-list-item-link">MyAccount</a></li>
+                <li class="top-nav-menu-list-item"><a href="../admin/admin.html" class="top-nav-menu-list-item-link">Administrator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="authorization-div" id="authorization-div">
+            <div class="close-authorization-div">
+                <input type="button" name="close-authorization" id="close-authorization" title="Close" onclick="closeRegForm();">
+            </div>
+            <h5 class="authorization-title">Sign in</h5>
+            <form novalidate class="authorization-form-group">
+                <div class="authorization-email-group">
+                    <label for="authorization-email" class="lbl-authorization-email">E-mail</label>
+                    <input type="email" name="authorization-email" id="authorization-email" placeholder="E-mail..." required>
+                </div>
+                <div class="authorization-password-group">
+                    <label for="authorization-password" class="lbl-authorization-password">Password</label>
+                    <input type="password" name="authorization-password" id="authorization-password" placeholder="Password..." required>
+                </div>
+                <div class="authorization-button-group">
+                    <a href="#" class="forgot-pasword-link">Forgot your password?</a>
+                    <input type="submit" name="authorization-submit" id="authorization-submit" value="Sign in">
+                    <a href="../user/checkin.html"><button type="button" name="checkin-button" id="checkin-button" >Create account</button></a>
+                </div>
+            </form>
+        </div>
+        <ul class="product-list">
+            <li class="product-item">
+                <div class="product-wrapper">
+                    <img class="product-image" src="../images/php-logo.png" alt="Image_PHP_product" />
+                    <div class="product-description">
+                        <h2 class="item-name">PHP</h2>
+                        <p class="p-item-text">What is PHP? </p>
+                        <p class="p-item-text">PHP is a server-side scripting language designed primarily for web development but also used as a general-purpose programming language.</p>
+                    </div>
+                    <p class="public-item-date">Public: 25.05.2017</p>
+                    <div class="product-price">
+                        <p class="p-item-price">Price: $400</p>
+                    </div>
+                    <form novalidate name="item-to-cart-form">
+                        <div class="item-to-cart-wrapper">
+                            <input type="submit" class="item-buy" name="submit-to-cart" id="submit-to-cart" value="Add to cart" onclick="addCountToCart();">
+                        </div>
+                    </form>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <footer class="footer">
+        <p class="p-footer-text">Copyright &copy; 2017 by Andrey Lada</p>
+        <p class="p-footer-text">Contact the author &#9998;
+            <a href="mailto:lordwinx@gmail.com" class="footer-email-link">lordwinx@gmail.com</a>
+        </p>
+    </footer>
+</body>
+
+</html>
