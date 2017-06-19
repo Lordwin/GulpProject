@@ -5,6 +5,7 @@ var uglify = require('gulp-uglify');
 var less = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
+var webserver = require('gulp-webserver');
 //var watch = require('gulp-watch');
 
 gulp.task('default', ['cssConcat', 'cssMin', 'jsUglify', 'watch'])
@@ -13,6 +14,15 @@ gulp.task('watch', function() {
 	gulp.watch('.GulpProject/**/*.css', ['cssConcat']);
 	gulp.watch('.GulpProject/**/*.js', ['jsUglify']);
 
+});
+
+gulp.task('webserver', function() {
+  gulp.src('./')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: true,
+      open: true
+    }));
 });
 
 gulp.task('less', function() {
