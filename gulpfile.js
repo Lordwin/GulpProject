@@ -1,6 +1,14 @@
 var gulp = require('gulp');
 var	concat = require('gulp-concat');
 var cssmin = require('gulp-cssmin');
+var uglify = require('gulp-uglify');
+
+gulp.task('jsUglify', function() {
+  gulp.src('./scripts/*.js')
+  	.pipe(concat('all.js'))
+  	.pipe(uglify())
+  	.pipe(gulp.dest('./out/'));
+});
 
 gulp.task('cssConcat', function() {
   gulp.src('./**/*.css')
