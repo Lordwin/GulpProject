@@ -3,6 +3,7 @@ var	concat = require('gulp-concat');
 var cssmin = require('gulp-cssmin');
 var uglify = require('gulp-uglify');
 var less = require('gulp-less');
+var autoprefixer = require('gulp-autoprefixer');
 //var watch = require('gulp-watch');
 
 gulp.task('default', ['cssConcat', 'cssMin', 'jsUglify', 'watch'])
@@ -29,6 +30,7 @@ gulp.task('jsUglify', function() {
 
 gulp.task('cssConcat', function() {
   gulp.src('./**/*.css')
+  	.pipe(autoprefixer())
   	.pipe(concat('all.css'))
   	.pipe(gulp.dest('./out/'));
 });
