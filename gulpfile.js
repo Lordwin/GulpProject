@@ -5,12 +5,13 @@ var uglify = require('gulp-uglify');
 var less = require('gulp-less');
 //var watch = require('gulp-watch');
 
+gulp.task('default', ['cssConcat', 'cssMin', 'jsUglify'])
+
 gulp.task('watch', function() {
 	gulp.watch('.GulpProject/**/*.css', ['cssConcat']);
 	gulp.watch('.GulpProject/**/*.js', ['jsUglify']);
 
 });
-
 
 gulp.task('less', function() {
 	 gulp.src('./*.less')
@@ -18,7 +19,6 @@ gulp.task('less', function() {
     .pipe(gulp.dest('./out/css'));
 
 });
-
 
 gulp.task('jsUglify', function() {
   gulp.src('./scripts/*.js')
