@@ -44,7 +44,7 @@ gulp.task('cssMin', function() {
 });
 
 gulp.task('imageMin', function() {
-	gulp.src('./images/*')
+	gulp.src('./images/*.*')
         .pipe(imagemin())
         .pipe(gulp.dest('out/images'))
 });
